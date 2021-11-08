@@ -7,9 +7,9 @@ export default function Menu(){
         <Base>
             <p>Copyright &copy; Racionalizando</p>
             <div>
-                <AiFillFacebook/>
-                <AiFillInstagram/>
-                <AiFillLinkedin/>
+                <AiFillFacebook className="icone"/>
+                <AiFillInstagram className="icone"/>
+                <AiFillLinkedin className="icone"/>
             </div>
         </Base>
 )}
