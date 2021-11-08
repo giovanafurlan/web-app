@@ -7,10 +7,11 @@ export const Container = styled.div`
 
     h1,h2,h3{
         text-transform: uppercase;
+        font-weight: 300;
     }
 
     h1{
-        font-size: 3.2vh;
+        font-size: 5vh;
     }
 
     h2{
@@ -21,12 +22,27 @@ export const Container = styled.div`
         font-size: 2.7vh;
     }
 
-    p,li{
+    p,li,button{
         font-size: 2.4vh;
     }
+
+    button {
+      width: 10vw;
+      padding: 10px 0;
+      background: #29C16E;
+      text-transform: uppercase;
+      border-radius: 5px;
+      border: none;
+      cursor: pointer;
+      transition: 1s all;
+   }
+
+   button:hover {
+      background: #a8a8a8;
+   }
 `
 
-export const Topo = styled.nav`
+export const Topo = styled.header`
     ul {
         list-style-type: none;
         overflow: hidden;
@@ -41,6 +57,7 @@ export const Topo = styled.nav`
         padding: 1vw;
         color: black;
         text-decoration: none;
+        transition: 1s all;
     }
 
     li .acessar{
