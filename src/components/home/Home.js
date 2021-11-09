@@ -4,10 +4,7 @@ import market from '../../img/market.png'
 
 export const Inicio = styled.section`
     height: 80vh;
-    background-image: url(${market});
-    display: flex;
-    flex-direction: column;
-    align-items: center;    
+    background-image: url(${market});  
 `
 
 export default function Home(){

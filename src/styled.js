@@ -22,12 +22,13 @@ export const Container = styled.div`
         font-size: 2.7vh;
     }
 
-    p,li,button{
+    p,li{
         font-size: 2.4vh;
     }
 
     button {
-      width: 10vw;
+      width: 8vw;
+      font-size: 2vh;
       padding: 10px 0;
       background: #29C16E;
       text-transform: uppercase;
