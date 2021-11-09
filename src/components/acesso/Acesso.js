@@ -45,7 +45,7 @@ export default function Acesso(){
                 <label for="senha">Senha</label>
                 <input type="password" id="senha"/><br/>
 
-                <button type="submit"><Link to="/produto" className="login">Acessar</Link></button>
+                <button><Link to="/produto" className="login">Acessar</Link></button>
             </form>
             <Link to="/cadastro" className="cadastro">Cadastre-se</Link>
         </Login>

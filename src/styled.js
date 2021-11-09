@@ -35,7 +35,6 @@ export const Container = styled.div`
       border-radius: 5px;
       border: none;
       cursor: pointer;
-      transition: 1s all;
    }
 
    button:hover {

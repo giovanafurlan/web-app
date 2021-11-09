@@ -39,9 +39,6 @@ export default function Cadastro(){
     return(
         <Registro>
             <h2>Cadastro</h2>
-            <figure>
-                <img src={logo} alt="Logo de fruta" />
-            </figure>
             <form>
                 <div className="coluna">
                     <div className="coluna1">
