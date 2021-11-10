@@ -27,7 +27,8 @@ export const Container = styled.div`
     }
 
     button {
-      width: 8vw;
+      width: 10vw;
+      height: 5vh;
       font-size: 2vh;
       padding: 10px 0;
       background: #29C16E;

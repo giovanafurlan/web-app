@@ -12,6 +12,7 @@ export const Formulario = styled.section`
     img{
         float: left;
         width: 23vw;
+        opacity: 0.7;
     }
 
     figure{
@@ -23,10 +24,6 @@ export const Formulario = styled.section`
         flex-direction: row;
         width: 50vw;
         margin-left: 20vw;
-    }
-
-    form,figure{
-
     }
 
     button{
@@ -67,7 +64,7 @@ export const Formulario = styled.section`
 function FormProduto() {
    return(
       <Formulario>
-          <h3>Produtos</h3>
+          <h3>Adicionar/ Editar Produtos</h3>
           <p>Gerenciamento de estoque de produtos</p>
           <div className="linha">
               <figure>
@@ -91,8 +88,7 @@ function FormProduto() {
                 </div>
                 <Link to="/" className="cancela">Cancelar</Link>
           </form>
-          </div>
-          
+          </div>  
       </Formulario>
 )}
 

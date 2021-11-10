@@ -51,14 +51,13 @@ export default function Cadastro(){
                         <input type="email" id="email" required/><br/>
                         <label for="cnpj">CNPJ</label>
                         <input type="text" id="cnpj" required/><br/>
-                        <label for="telefone">Telefone</label>
-                        <input type="tel" id="telefone" required/><br/>
                         <label for="CEP">CEP</label>
                         <input type="text" id="CEP" required/><br/>
-                    </div>
-                    <div className="coluna2">
                         <label for="rua">Rua</label>
                         <input type="text" id="rua" required/><br/>
+                    </div>
+                    <div className="coluna2">
+                        
                         <label for="bairro">Bairro</label>
                         <input type="text" id="bairro" required/><br/>
                         <label for="cidade">Cidade</label>

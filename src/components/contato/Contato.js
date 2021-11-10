@@ -1,10 +1,17 @@
 import React from "react";
 import styled from 'styled-components';
+import { AiOutlineMail } from "react-icons/ai";
+import { AiOutlineUser } from "react-icons/ai";
+import { AiFillMessage } from "react-icons/ai";
+
 
 export const Mensagem = styled.section`
-width: 97.2vw;
+    width: 97.2vw;
     height: 80vh;
-    border: solid 2px #29C16E;
+
+    form{
+        height: 50vh;
+    }
 
     .formulario{
         font-size: 2.2vh;
@@ -29,13 +36,19 @@ width: 97.2vw;
 
     .mens{
         display:block; 
+        margin: 1vw;
         float:left;
     }​
-
 
     .cadastro{
         color: black;
         text-decoration: none;
+    }
+
+    .icone{
+        font-size: 2vw;
+        margin: 1vw 1vw 0 0;
+        color: #29C16E;
     }
 `
 
@@ -52,13 +65,13 @@ function Contato() {
             <p>Faça uma parceria e/ou tire suas dúvidas</p>
             <div className="formulario">
             <div className="formulario1">
-                <label for="nome">Nome</label>
+                <label for="nome"><AiOutlineUser className="icone"/>Nome</label>
                 <input type="text" id="nome"/><br/>
-                <label for="email">Email</label>
+                <label for="email"><AiOutlineMail className="icone"/>Email</label>
                 <input type="email" id="email"/>
             </div>
             <div className="formulario2">
-                <label for="mens" className="mens">Mensagem</label>
+                <label for="mens" className="mens"><AiFillMessage className="icone"/>Mensagem</label>
                 <textarea type="text" id="mens" rows="20" cols="30"/>
             </div>
             </div>

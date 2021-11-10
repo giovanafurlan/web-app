@@ -24,7 +24,6 @@ export const Info = styled.section`
     figure{
         flex-direction: column;
         border-bottom: 6px solid #EF3C56;
-        background-color: #e9e9e9;
     }
 
     figure p{
@@ -33,6 +32,24 @@ export const Info = styled.section`
 
     figcaption{
         font-weight: bold;
+    }
+
+    @media screen and (max-width: 600px){
+        height: 190vh;
+
+        img{
+            width: 25vw;
+        }
+
+        .cartao{
+            flex-direction: column;
+            height: 30vh;
+            margin-top: 10vh;
+        }
+
+        figure p{
+            width: 60vw;
+        }
     }
 `
 
