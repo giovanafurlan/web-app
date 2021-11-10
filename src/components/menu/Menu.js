@@ -8,6 +8,8 @@ import Equipe from '../equipe/Equipe'
 import Contato from '../contato/Contato'
 import Acesso from '../acesso/Acesso'
 import Cadastro from '../cadastro/Cadastro'
+import FormProduto from '../formproduto/FormProduto'
+import ListaProduto from '../listaproduto/ListaProduto'
 
 export default function Menu(){
     return (
@@ -27,6 +29,8 @@ export default function Menu(){
                     <Route path="/contato" component={Contato}/>
                     <Route path="/acesso" component={Acesso}/>
                     <Route path="/cadastro" component={Cadastro}/>
+                    <Route path="/incluir" component={FormProduto}/>
+                    <Route path="/lista" component={ListaProduto}/>
                 </Switch >
         </Topo>
 )}

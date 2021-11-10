@@ -8,25 +8,27 @@ export const Grupo = styled.section`
 export default function Equipe(){
     return(
         <Grupo>
+            <h3>Equipe</h3>
+            <p>1TDSS</p>
             <figure>
                 <img src="" alt="Integrante do projeto" />
-                <figcaption>Andrey<br/>RM0000</figcaption>
+                <figcaption>Andrey Garcia<br/>RM87219</figcaption>
             </figure>
             <figure>
                 <img src="" alt="Integrante do projeto" />
-                <figcaption>Diego<br/>RM0000</figcaption>
+                <figcaption>Diego Augusto<br/>RM86877</figcaption>
             </figure>
             <figure>
                 <img src="" alt="Integrante do projeto" />
-                <figcaption>Emily<br/>RM0000</figcaption>
+                <figcaption>Emily Manfrin<br/>RM87198</figcaption>
             </figure>
             <figure>
                 <img src="" alt="Integrante do projeto" />
-                <figcaption>Giovana<br/>RM0000</figcaption>
+                <figcaption>Giovana Furlan<br/>RM88936</figcaption>
             </figure>
             <figure>
                 <img src="" alt="Integrante do projeto" />
-                <figcaption>João<br/>RM0000</figcaption>
+                <figcaption>João Victor<br/>RM89087</figcaption>
             </figure>
         </Grupo>
 )}

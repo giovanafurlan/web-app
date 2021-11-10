@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import styled from 'styled-components';
-import logo from '../../img/logo.png'
 
 export const Registro = styled.section`
     width: 97.2vw;
@@ -33,6 +32,10 @@ export const Registro = styled.section`
         color: black;
         text-decoration: none;
     }
+
+    .limpa{
+        background-color: #EF3C56;
+    }
 `
 
 export default function Cadastro(){
@@ -42,38 +45,34 @@ export default function Cadastro(){
             <form>
                 <div className="coluna">
                     <div className="coluna1">
-                    <label for="nome">Nome</label>
-                    <input type="text" id="nome" required/><br/>
-                    <label for="email">Email</label>
-                    <input type="email" id="email" required/><br/>
-                    <label for="cnpj">CNPJ</label>
-                    <input type="text" id="cnpj" required/><br/>
-                    <label for="telefone">Telefone</label>
-                    <input type="tel" id="telefone" required/><br/>
-                    <label for="CEP">CEP</label>
-                    <input type="text" id="CEP" required/><br/>
+                        <label for="nome">Nome</label>
+                        <input type="text" id="nome" required/><br/>
+                        <label for="email">Email</label>
+                        <input type="email" id="email" required/><br/>
+                        <label for="cnpj">CNPJ</label>
+                        <input type="text" id="cnpj" required/><br/>
+                        <label for="telefone">Telefone</label>
+                        <input type="tel" id="telefone" required/><br/>
+                        <label for="CEP">CEP</label>
+                        <input type="text" id="CEP" required/><br/>
+                    </div>
+                    <div className="coluna2">
+                        <label for="rua">Rua</label>
+                        <input type="text" id="rua" required/><br/>
+                        <label for="bairro">Bairro</label>
+                        <input type="text" id="bairro" required/><br/>
+                        <label for="cidade">Cidade</label>
+                        <input type="text" id="cidade" required/><br/>
+                        <label for="estado">Estado</label>
+                        <input type="text" id="estado" required/><br/>
+                        <label for="senha">Senha</label>
+                        <input type="password" id="senha" required/><br/>
+                    </div>
                 </div>
-                
-                <div className="coluna2">
-                    <label for="rua">Rua</label>
-                    <input type="text" id="rua" required/><br/>
-                    <label for="bairro">Bairro</label>
-                    <input type="text" id="bairro" required/><br/>
-                    <label for="cidade">Cidade</label>
-                    <input type="text" id="cidade" required/><br/>
-                    <label for="estado">Estado</label>
-                    <input type="text" id="estado" required/><br/>
-                    <label for="senha">Senha</label>
-                    <input type="password" id="senha" required/><br/>
-                </div>
-                </div>
-                
-                
                 <div className="botoes">
                     <button type="submit"><Link to="/acesso" className="cadastro">Cadastrar</Link></button>
-                    <button type="reset">Limpar</button>
+                    <button type="reset" className="limpa">Limpar</button>
                 </div>
-                
             </form>
         </Registro>
 )}

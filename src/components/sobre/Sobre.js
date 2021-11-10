@@ -4,7 +4,6 @@ import mudanca from '../../img/mudanca.png'
 import onu from '../../img/onu.png'
 import igualdade from '../../img/igualdade.png'
 
-
 export const Info = styled.section`
     .cartao{
         display: flex;
@@ -37,6 +36,7 @@ export const Info = styled.section`
 `
 
 export default function Sobre(){
+    
     return(
         <Info>
             <h2>Sobre</h2>
