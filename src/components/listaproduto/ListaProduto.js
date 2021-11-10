@@ -37,7 +37,7 @@ function ListaProduto() {
 
    return(
      <Lista>
-         <h3>Lista de Hobbies</h3>
+         <h3>Lista</h3>
           <Link to="/incluir" className="inclui">Inserir Produto</Link>
           <table>
               <thead>

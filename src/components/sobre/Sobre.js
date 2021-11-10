@@ -8,7 +8,6 @@ export const Info = styled.section`
     .cartao{
         display: flex;
         justify-content: space-between;
-
     }
 
     .sobre{
@@ -24,6 +23,8 @@ export const Info = styled.section`
 
     figure{
         flex-direction: column;
+        border-bottom: 6px solid #EF3C56;
+        background-color: #e9e9e9;
     }
 
     figure p{
@@ -41,7 +42,7 @@ export default function Sobre(){
         <Info>
             <h2>Sobre</h2>
             <div className="sobre">
-                <p>A plataforma constitui em uma conexão entre supermercados e entidades assistenciais. Estas poderão procurar supermercados que tenham descontos em produtos próximos à data de validade ou até mesmo doações de supermercados próximos a sua localidade, tendo em vista toda a segurança alimentar vigente em leis e respaldados pela vigilância sanitária.</p>
+                <p>A plataforma Racionalizando constitui em uma conexão entre supermercados e entidades assistenciais. Estas poderão procurar supermercados que tenham descontos em produtos próximos à data de validade ou até mesmo doações de supermercados próximos a sua localidade, tendo em vista toda a segurança alimentar vigente em leis e respaldados pela vigilância sanitária.</p>
             </div>
             <div className="cartao">
                 <figure>

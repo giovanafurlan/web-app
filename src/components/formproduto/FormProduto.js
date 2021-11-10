@@ -1,11 +1,33 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
+import buy from '../../img/buy.jpg'
 
 export const Formulario = styled.section`
     height: 85vh;
     display: flex;
     flex-direction: column;
+    margin: 0;
+
+    img{
+        float: left;
+        width: 23vw;
+    }
+
+    figure{
+        margin: 0;
+        width: 20vw;
+    }
+
+    .linha{
+        flex-direction: row;
+        width: 50vw;
+        margin-left: 20vw;
+    }
+
+    form,figure{
+
+    }
 
     button{
         margin: 1vw;
@@ -13,10 +35,12 @@ export const Formulario = styled.section`
 
     form{
         font-size: 2.2vh;
-        justify-content: space-evenly;
+        width: 20vw;
+        float: right;
     }
 
-    .formulario{
+    form,img{
+        margin: 0;
     }
 
     input{
@@ -25,10 +49,10 @@ export const Formulario = styled.section`
     }
 
     .center-block {
-  display: block;
-  margin-right: auto;
-  margin-left: auto;
-}
+        display: block;
+        margin-right: auto;
+        margin-left: auto;
+    }
 
     .cancela{
         color: black;
@@ -45,6 +69,10 @@ function FormProduto() {
       <Formulario>
           <h3>Produtos</h3>
           <p>Gerenciamento de estoque de produtos</p>
+          <div className="linha">
+              <figure>
+              <img src={buy} alt="Carrinho de supermercado" />
+          </figure>
           <form>
                 <div className="formulario">
                     <label for="nome" className="row">Nome</label>
@@ -63,6 +91,8 @@ function FormProduto() {
                 </div>
                 <Link to="/" className="cancela">Cancelar</Link>
           </form>
+          </div>
+          
       </Formulario>
 )}
 
