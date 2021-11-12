@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import buy from '../../img/buy.jpg'
@@ -61,7 +61,53 @@ export const Formulario = styled.section`
     }
 `
 
-function FormProduto() {
+function FormProduto(props) {
+
+    let id = null
+    if (props.match.path.toLowerCase().includes('editar')) {
+        id = props.match.params.codigo
+    }
+    const [novo, setNovo] = useState({
+        codigo: id,
+        nome: "",
+        quantidade: "",
+        dataValidade: "",
+        valorUnitario: "",
+        valorTotal: ""
+    })
+
+    let metodo = 'post'
+    if (id) {
+        metodo = 'put'
+    }
+    const handleChange = (e) => {
+        setNovo({ ...novo, [e.target.name]: e.target.value });
+    }
+
+    const handleSubmit = (e) => {
+        e.preventDefault()
+
+        fetch('/rest/produto/' + (id ? id : ""), {
+            method: metodo,
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(novo)
+        }).then(() => {
+            window.location = '/'
+        })
+    }
+
+    useEffect(() => {
+        if (id) {
+            fetch("/rest/produto/" + id).then(resp => {
+                return (resp.json())
+            }).then(data => {
+                setNovo(data)
+            })
+        }
+    }, [id])
+
    return(
       <Formulario>
           <h3>Adicionar/ Editar Produtos</h3>
@@ -70,18 +116,18 @@ function FormProduto() {
               <figure>
               <img src={buy} alt="Carrinho de supermercado" />
           </figure>
-          <form>
+          <form onSubmit={handleSubmit}>
                 <div className="formulario">
                     <label for="nome" className="row">Nome</label>
-                    <input type="text" id="nome" name="nome" class="center-block"/><br/>
+                    <input type="text" id="nome" name="nome" class="center-block" value={novo.nome} onChange={handleChange}/><br/>
                     <label for="qtd">Quantidade</label>
-                    <input type="number" id="qtd" name="qtd" class="center-block"/><br/>
-                    <label for="data">Data de Validade</label>
-                    <input type="date" id="data" name="data" class="center-block"/><br/>
-                    <label for="valorUnidade">Valor Unidade (R$)</label>
-                    <input type="number" id="valorUnidade" name="valorUnidade" class="center-block"/><br/>
+                    <input type="number" id="quantidade" name="quantidade" class="center-block" value={novo.quantidade} onChange={handleChange}/><br/>
+                    <label for="dataValidade">Data de Validade</label>
+                    <input type="text" id="dataValidade" name="dataValidade" class="center-block" value={novo.dataValidade} onChange={handleChange}/><br/>
+                    <label for="valorUnitario">Valor Unidade (R$)</label>
+                    <input type="number" id="valorUnitario" name="valorUnitario" class="center-block" value={novo.valorUnitario} onChange={handleChange}/><br/>
                     <label for="valorTotal">Valor Total (R$)</label>
-                    <input type="number" id="valorTotal" name="valorTotal" class="center-block"/><br/>
+                    <input type="number" id="valorTotal" name="valorTotal" class="center-block" value={novo.valorTotal} onChange={handleChange}/><br/>
                 </div>
                 <div className="botao">
                     <button className="btn" type="submit">Enviar</button>

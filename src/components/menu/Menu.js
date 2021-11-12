@@ -31,6 +31,7 @@ export default function Menu(){
                     <Route path="/cadastro" component={Cadastro}/>
                     <Route path="/incluir" component={FormProduto}/>
                     <Route path="/lista" component={ListaProduto}/>
+                    <Route path="/editar/:codigo" component={FormProduto}/>
                 </Switch >
         </Topo>
 )}

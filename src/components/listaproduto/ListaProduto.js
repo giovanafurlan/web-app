@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
@@ -35,6 +35,30 @@ export const Lista = styled.section`
 
 function ListaProduto() {
 
+    const [produtos, setProdutos] = useState([])
+
+    useEffect(() => {
+        fetch('/rest/produto').then((resp) => {
+            return resp.json()
+        }).then((resp) => {
+            setProdutos(resp)
+            console.table(resp)
+        }).catch((err) => {
+            console.error(err)
+        })
+    }, [])
+
+    const handleDelete = (codigo) => {
+        fetch('/rest/produto/' + codigo, {
+            method: 'delete'
+        }).then(() => {
+            window.location = '/'
+        }).catch((err) => {
+            console.error(err)
+        })
+    }
+
+
    return(
      <Lista>
          <h3>Lista</h3>
@@ -50,18 +74,21 @@ function ListaProduto() {
                       <th>Editar</th>
                   </tr>
               </thead>
-              {/* <tbody>
-                  {
-                      hobbies.map((nome)=> (
-                          <tr key={nome.codigo}>
-                              <td>{nome.nome}</td>
-                              <td>
-                                  <Link title="Editar" to={`/editar/${nome.codigo}`}>Editar</Link>
-                                  <Link title="Editar" to="/" title="Excluir" onClick={handleDelete.bind(this, nome.codigo)}>Excluir</Link>
-                              </td>
-                          </tr>
-                      ))}
-              </tbody> */}
+              <tbody>
+                    {produtos.map((produto) => (
+                        <tr key={produto.codigo}>
+                            <td>{produto.nome}</td>
+                            <td>{produto.quantidade}</td>
+                            <td>{produto.dataValidade}</td>
+                            <td>{produto.valorUnitario}</td>
+                            <td>{produto.valorTotal}</td>
+                            <td>
+                                <Link title="Editar" to={`/editar/${produto.codigo}`}>Editar</Link> |
+                                <Link title="Excluir" to='/' onClick={handleDelete.bind(this, produto.codigo)}>Excluir</Link>
+                            </td>
+                        </tr>
+                    ))}
+                </tbody>
           </table>
      </Lista>
 )}
