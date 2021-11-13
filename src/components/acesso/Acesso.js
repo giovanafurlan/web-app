@@ -44,6 +44,7 @@ export default function Acesso(){
             <figure>
                 <img src={logo} alt="Logo de fruta" />
             </figure>
+            <p>Acesse para gerenciar o estoque dos produtos</p>
             <form>
                 <label for="email">Email</label>
                 <input type="email" id="email"/><br/>
