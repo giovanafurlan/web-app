@@ -64,18 +64,18 @@ export default function Sobre(){
             <div className="cartao">
                 <figure>
                     <img src={mudanca} alt="Simulação de um gráfico de plantas" />
-                    <figcaption>Mudança</figcaption>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae vero accusamus dicta ab placeat officiis atque aut unde, dolor, molestiae et facilis facere quo quia nobis? Repudiandae saepe maiores eos.</p>
+                    <figcaption>Problema</figcaption>
+                    <p> Um terço de toda a comida produzida para consumo humano no mundo é desperdiçado. O montante chega a 1,3 bilhão de toneladas por ano, segundo o mais recente relatório apresentado pela Organização das Nações Unidas para a Alimentação e a Agricultura (FAO).</p>
                 </figure>
                 <figure>
                     <img src={onu} alt="Planeta terra" />
                     <figcaption>ONU</figcaption>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae vero accusamus dicta ab placeat officiis atque aut unde, dolor, molestiae et facilis facere quo quia nobis? Repudiandae saepe maiores eos.</p>
+                    <p>Objetivo de Desenvolvimento Sustentável 2 <br/>(Fome zero e agricultura sustentável) <br/>Erradicar a fome, alcançar a segurança alimentar, melhorar a nutrição e promover a agricultura sustentável.</p>
                 </figure>
                 <figure>
                     <img src={igualdade} alt="Representação de uma comunidade com pessoas e residências" />
-                    <figcaption>Igualdade</figcaption>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae vero accusamus dicta ab placeat officiis atque aut unde, dolor, molestiae et facilis facere quo quia nobis? Repudiandae saepe maiores eos.</p>
+                    <figcaption>Mudança</figcaption>
+                    <p>Para tentar reverter esse desperdício — que ocorre do início da cadeia de produção até a casa do consumidor —, os bancos de alimentos fazem um trabalho hercúleo ao coletar legumes, verduras, carnes e frutas que seriam jogados no lixo e redistribuir tudo entre instituições.</p>
                 </figure>
             </div>
         </Info>

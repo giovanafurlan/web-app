@@ -4,7 +4,6 @@ import { AiOutlineMail } from "react-icons/ai";
 import { AiOutlineUser } from "react-icons/ai";
 import { AiFillMessage } from "react-icons/ai";
 
-
 export const Mensagem = styled.section`
     width: 97.2vw;
     height: 80vh;
@@ -66,18 +65,16 @@ function Contato() {
             <div className="formulario">
             <div className="formulario1">
                 <label for="nome"><AiOutlineUser className="icone"/>Nome</label>
-                <input type="text" id="nome"/><br/>
+                <input type="text" id="nome" required/><br/>
                 <label for="email"><AiOutlineMail className="icone"/>Email</label>
-                <input type="email" id="email"/>
+                <input type="email" id="email" required/>
             </div>
             <div className="formulario2">
                 <label for="mens" className="mens"><AiFillMessage className="icone"/>Mensagem</label>
-                <textarea type="text" id="mens" rows="20" cols="30"/>
+                <textarea type="text" id="mens" rows="20" cols="30" required/>
             </div>
             </div>
-
             <button type="submit">Enviar</button>
-
         </form>
     </Mensagem>
   )

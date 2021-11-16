@@ -58,7 +58,6 @@ function ListaProduto() {
         })
     }
 
-
    return(
      <Lista>
          <h3>Lista</h3>
